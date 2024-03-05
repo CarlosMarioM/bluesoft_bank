@@ -1,0 +1,38 @@
+[
+    {
+      "id": "90123",
+      "type": "consignment",
+      "value": 500.0,
+      "date": "2024-03-05T00:00:00.000Z",
+      "accountId": "56789"
+    },
+    {
+      "id": "34567",
+      "type": "withdrawal",
+      "value": 200.0,
+      "date": "2024-03-04T15:30:00.000Z",
+      "accountId": "01234"
+    },
+    {
+      "id": "78901",
+      "type": "consignment",
+      "value": 100.0,
+      "date": "2024-03-03T00:00:00.000Z",
+      "accountId": "98765"
+    },
+    {
+      "id": "21098",
+      "type": "withdrawal",
+      "value": 150.0,
+      "date": "2024-03-02T00:00:00.000Z",
+      "accountId": "45678"
+    },
+    {
+      "id": "65432",
+      "type": "consignment",
+      "value": 300.0,
+      "date": "2024-03-01T00:00:00.000Z",
+      "accountId": "21098"
+    }
+  ]
+  

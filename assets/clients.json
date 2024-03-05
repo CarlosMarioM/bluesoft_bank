@@ -1,0 +1,33 @@
+[
+    {
+      "id": "12345",
+      "name": "John Doe",
+      "city": "New York",
+      "uid": "abc123"
+    },
+    {
+      "id": "67890",
+      "name": "Jane Smith",
+      "city": "Los Angeles",
+      "uid": "def456"
+    },
+    {
+      "id": "09876",
+      "name": "Alice Brown",
+      "city": "London",
+      "uid": "ghi789"
+    },
+    {
+      "id": "45612",
+      "name": "David Johnson",
+      "city": "Paris",
+      "uid": "jkl012"
+    },
+    {
+      "id": "32109",
+      "name": "Emily Garcia",
+      "city": "Berlin",
+      "uid": "mno345"
+    }
+  ]
+  
