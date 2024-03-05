@@ -1,6 +1,6 @@
 enum AccountType {
-  personal("Personal"),
-  company("Company");
+  current("current"),
+  savings("savings");
 
   final String value;
   const AccountType(this.value);
