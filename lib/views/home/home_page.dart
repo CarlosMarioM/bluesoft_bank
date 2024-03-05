@@ -36,10 +36,12 @@ class HomePage extends StatelessWidget {
                     textAlign: TextAlign.justify,
                   ),
                   const CircleAvatar(
+                    maxRadius: 24,
                     backgroundColor: Colors.black,
                     child: Icon(
                       Icons.person,
                       color: Colors.white,
+                      size: 36,
                     ),
                   )
                 ],
