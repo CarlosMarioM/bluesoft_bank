@@ -7,26 +7,26 @@ class NeumorphismCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 8.0),
+      padding: const EdgeInsets.symmetric(horizontal: 4.0),
       child: Container(
-        margin: const EdgeInsets.symmetric(horizontal: 10),
+        margin: const EdgeInsets.symmetric(horizontal: 4),
         decoration: BoxDecoration(
           color: Colors.white,
-          borderRadius: BorderRadius.circular(15),
+          borderRadius: BorderRadius.circular(8),
           boxShadow: const [
             BoxShadow(
-              blurStyle: BlurStyle.outer,
-              color: Colors.black12,
+              blurStyle: BlurStyle.inner,
+              color: Colors.black,
               offset: Offset(0, 1),
-              blurRadius: 3,
-              spreadRadius: 1,
+              blurRadius: 1,
+              spreadRadius: 2,
             ),
             BoxShadow(
               blurStyle: BlurStyle.inner,
-              color: Colors.black12,
+              color: Colors.black,
               offset: Offset(0, -1),
-              blurRadius: 15,
-              spreadRadius: .8,
+              blurRadius: 1,
+              spreadRadius: 2,
             ),
           ],
         ),
