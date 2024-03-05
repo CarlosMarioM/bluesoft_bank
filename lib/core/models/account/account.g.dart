@@ -23,6 +23,6 @@ Map<String, dynamic> _$$AccountImplToJson(_$AccountImpl instance) =>
     };
 
 const _$AccountTypeEnumMap = {
-  AccountType.personal: 'personal',
-  AccountType.company: 'company',
+  AccountType.current: 'current',
+  AccountType.savings: 'savings',
 };

@@ -2,10 +2,8 @@ import 'package:bluesoft_bank/ui/cards/neumorphism_card.dart';
 import 'package:flutter/material.dart';
 
 class BalanceCard extends StatelessWidget {
-  const BalanceCard({
-    super.key,
-  });
-
+  const BalanceCard({super.key, required this.totalBalance});
+  final num totalBalance;
   @override
   Widget build(BuildContext context) {
     return NeumorphismCard(
@@ -24,7 +22,7 @@ class BalanceCard extends StatelessWidget {
             Align(
               alignment: Alignment.centerRight,
               child: Text(
-                "\$ 2,500.00", //TODO remove hardcoded value
+                "\$ $totalBalance",
                 style: Theme.of(context).textTheme.titleLarge,
                 textAlign: TextAlign.justify,
               ),
