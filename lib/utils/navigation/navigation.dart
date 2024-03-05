@@ -1,5 +1,5 @@
 import 'package:bluesoft_bank/utils/extension/widget/widget_extension.dart';
-import 'package:bluesoft_bank/views/home/widgets/home_screen.dart';
+import 'package:bluesoft_bank/views/home/home_screen.dart';
 import 'package:bluesoft_bank/core/models/client/client.dart';
 import 'package:bluesoft_bank/views/login/login_screen.dart';
 

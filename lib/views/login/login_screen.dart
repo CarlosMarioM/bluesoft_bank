@@ -2,7 +2,7 @@ import 'package:bluesoft_bank/bloc/login_bloc/login_bloc.dart';
 import 'package:bluesoft_bank/core/di/di.dart';
 import 'package:bluesoft_bank/core/models/client/client.dart';
 import 'package:bluesoft_bank/utils/extension/navigation/navigation_extension.dart';
-import 'package:bluesoft_bank/views/home/widgets/home_screen.dart';
+import 'package:bluesoft_bank/views/home/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
