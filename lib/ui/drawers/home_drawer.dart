@@ -1,5 +1,5 @@
-import 'package:bluesoft_bank/ui/buttons/secondary_button.dart';
 import 'package:bluesoft_bank/ui/scaffolds/home_scaffold.dart';
+import 'package:bluesoft_bank/ui/buttons/primary_button.dart';
 import 'package:flutter/material.dart';
 
 class HomeDrawer extends StatelessWidget {
@@ -8,14 +8,31 @@ class HomeDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
+      shape: const RoundedRectangleBorder(),
+      backgroundColor: Theme.of(context).colorScheme.onPrimary,
       child: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            const Text('This is the Drawer'),
-            SecondaryButton(
+            PrimaryButton(
+              isEnabled: true,
               onPressed: () => homeScaffoldKey.currentState!.closeEndDrawer(),
-              text: 'Close Drawer',
+              text: 'TRANSACTIONS',
+            ),
+            PrimaryButton(
+              isEnabled: true,
+              onPressed: () => homeScaffoldKey.currentState!.closeEndDrawer(),
+              text: 'REPORTS',
+            ),
+            PrimaryButton(
+              isEnabled: true,
+              onPressed: () => homeScaffoldKey.currentState!.closeEndDrawer(),
+              text: 'SETTINGS',
+            ),
+            PrimaryButton(
+              isEnabled: true,
+              onPressed: () => homeScaffoldKey.currentState!.closeEndDrawer(),
+              text: 'LOGOUT',
             ),
           ],
         ),
