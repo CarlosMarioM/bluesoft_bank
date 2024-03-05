@@ -1,3 +1,4 @@
+import 'package:bluesoft_bank/ui/theme/theme.dart';
 import 'package:flutter/material.dart';
 
 class NeumorphismCard extends StatelessWidget {
@@ -10,22 +11,22 @@ class NeumorphismCard extends StatelessWidget {
       child: Container(
         margin: const EdgeInsets.symmetric(horizontal: 10),
         decoration: BoxDecoration(
-          color: const Color.fromARGB(252, 250, 250, 250),
+          color: Colors.white,
           borderRadius: BorderRadius.circular(15),
           boxShadow: const [
             BoxShadow(
-              blurStyle: BlurStyle.inner,
-              color: Color.fromARGB(255, 219, 219, 219),
-              offset: Offset(0, 2),
-              blurRadius: 5,
+              blurStyle: BlurStyle.outer,
+              color: Colors.black12,
+              offset: Offset(0, 1),
+              blurRadius: 3,
               spreadRadius: 1,
             ),
             BoxShadow(
               blurStyle: BlurStyle.inner,
-              color: Color.fromARGB(255, 255, 255, 255),
-              offset: Offset(0, -2),
-              blurRadius: 5,
-              spreadRadius: 1,
+              color: Colors.black12,
+              offset: Offset(0, -1),
+              blurRadius: 15,
+              spreadRadius: .8,
             ),
           ],
         ),
