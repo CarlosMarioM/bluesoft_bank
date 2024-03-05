@@ -36,6 +36,7 @@ class HomePage extends StatelessWidget {
               Align(
                 alignment: Alignment.bottomCenter,
                 child: PrimaryButton(
+                  isEnabled: !state.isLoading,
                   onPressed: () {},
                   text: "WITHDRAW",
                 ),

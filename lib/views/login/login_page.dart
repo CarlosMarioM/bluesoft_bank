@@ -62,6 +62,7 @@ class _LoginPageState extends State<LoginPage> {
               Align(
                 alignment: Alignment.bottomCenter,
                 child: PrimaryButton(
+                  isEnabled: !state.isLoading,
                   onPressed: () {
                     context.read<LoginBloc>().add(LoginEvent.login(
                         userController.text, passwordController.text));

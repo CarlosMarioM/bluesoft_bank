@@ -5,9 +5,11 @@ class PrimaryButton extends StatelessWidget {
     super.key,
     required this.onPressed,
     required this.text,
+    required this.isEnabled,
   });
   final VoidCallback onPressed;
   final String text;
+  final bool isEnabled;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
