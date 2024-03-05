@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 
 class BackgroundScaffold extends StatelessWidget {
-  const BackgroundScaffold(
-      {super.key,
-      required this.appBar,
-      required this.child,
-      required this.isLoading});
+  const BackgroundScaffold({
+    super.key,
+    required this.appBar,
+    required this.isLoading,
+    required this.child,
+  });
   final PreferredSizeWidget appBar;
-  final Widget child;
   final bool isLoading;
+  final Widget child;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(

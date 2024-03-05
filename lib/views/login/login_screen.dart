@@ -3,6 +3,7 @@ import 'package:bluesoft_bank/core/di/di.dart';
 import 'package:bluesoft_bank/core/models/client/client.dart';
 import 'package:bluesoft_bank/utils/extension/navigation/navigation_extension.dart';
 import 'package:bluesoft_bank/views/home/home_page.dart';
+import 'package:bluesoft_bank/views/home/widgets/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -27,7 +28,7 @@ class LoginScreen extends StatelessWidget {
           if (state.navigateToHomePage != null) {
             final Client client = state.navigateToHomePage!.consume()!;
             context.pushReplacementNamed(
-                routeName: HomePage.route, arguments: client);
+                routeName: HomeScreen.route, arguments: client);
           }
         },
         child: const LoginPage(),
