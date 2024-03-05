@@ -22,7 +22,7 @@ class BalanceCard extends StatelessWidget {
             Align(
               alignment: Alignment.centerRight,
               child: Text(
-                "\$ $totalBalance", //TODO remove hardcoded value
+                "\$ $totalBalance",
                 style: Theme.of(context).textTheme.titleLarge,
                 textAlign: TextAlign.justify,
               ),
