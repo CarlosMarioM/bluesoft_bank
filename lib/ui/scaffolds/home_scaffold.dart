@@ -1,8 +1,10 @@
-import 'package:bluesoft_bank/ui/scaffolds/home_scaffold.dart';
+import 'package:bluesoft_bank/ui/drawers/home_drawer.dart';
 import 'package:flutter/material.dart';
 
-class BackgroundScaffold extends StatelessWidget {
-  const BackgroundScaffold({
+final GlobalKey<ScaffoldState> homeScaffoldKey = GlobalKey<ScaffoldState>();
+
+class HomeScaffold extends StatelessWidget {
+  const HomeScaffold({
     super.key,
     required this.appBar,
     required this.child,
@@ -18,7 +20,9 @@ class BackgroundScaffold extends StatelessWidget {
         }
       },
       child: Scaffold(
+        key: homeScaffoldKey,
         resizeToAvoidBottomInset: false,
+        endDrawer: const HomeDrawer(),
         appBar: appBar,
         backgroundColor: Colors.white,
         body: SafeArea(
@@ -29,5 +33,3 @@ class BackgroundScaffold extends StatelessWidget {
     );
   }
 }
-
-
