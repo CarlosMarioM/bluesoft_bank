@@ -1,14 +1,15 @@
 import 'package:bluesoft_bank/utils/extension/widget/widget_extension.dart';
 import 'package:bluesoft_bank/views/home/home_page.dart';
-import 'package:bluesoft_bank/views/login/login_page.dart';
+
+import 'package:bluesoft_bank/views/login/login_screen.dart';
 import 'package:flutter/material.dart';
 
 class Navigation {
   Route<dynamic> generateRoute(RouteSettings settings) {
     final arguments = settings.arguments;
     switch (settings.name) {
-      case LoginPage.route:
-        return const LoginPage().buildPageRoute();
+      case LoginScreen.route:
+        return const LoginScreen().buildPageRoute();
       case HomePage.route:
         return const HomePage().buildPageRoute();
       default:

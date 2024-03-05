@@ -1,8 +1,9 @@
 import 'package:bluesoft_bank/core/di/di.dart';
 import 'package:bluesoft_bank/utils/navigation/navigation.dart';
-import 'package:bluesoft_bank/views/login/login_page.dart';
 import 'ui/theme/theme.dart';
 import 'package:flutter/material.dart';
+
+import 'views/login/login_screen.dart';
 
 class BluesoftBank extends StatelessWidget {
   const BluesoftBank({super.key});
@@ -10,7 +11,7 @@ class BluesoftBank extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: LoginPage.route,
+      initialRoute: LoginScreen.route,
       themeMode: ThemeMode.dark,
       theme: Theming.data,
       onGenerateRoute: getIt<Navigation>().generateRoute,

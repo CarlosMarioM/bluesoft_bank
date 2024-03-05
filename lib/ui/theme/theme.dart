@@ -73,6 +73,7 @@ class Theming {
           focusColor: Colors.black38,
         ),
         textTheme: const TextTheme(
+          labelSmall: TextStyle(color: Colors.white),
           headlineLarge: TextStyle(
               color: Colors.black,
               fontWeight: FontWeight.w700,
@@ -84,7 +85,6 @@ class Theming {
           color: Colors.white,
           elevation: .5,
           margin: EdgeInsets.symmetric(horizontal: 8),
-          
         ),
         dividerTheme: const DividerThemeData(color: Colors.black54),
         inputDecorationTheme: InputDecorationTheme(
