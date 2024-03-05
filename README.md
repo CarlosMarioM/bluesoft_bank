@@ -1,16 +1,97 @@
 # bluesoft_bank
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Folder Structure
+- 
+```
+└── 📁lib
+    └── 📁bloc
+        └── 📁home_bloc
+            └── home_bloc.dart
+            └── home_bloc.freezed.dart
+            └── home_event.dart
+            └── home_state.dart
+        └── 📁login_bloc
+            └── login_bloc.dart
+            └── login_bloc.freezed.dart
+            └── login_event.dart
+            └── login_state.dart
+    └── bluesoft_bank.dart
+    └── 📁core
+        └── 📁di
+            └── di.config.dart
+            └── di.dart
+        └── 📁enums
+            └── account_type.dart
+            └── report_type.dart
+            └── transaction_type.dart
+        └── 📁models
+            └── 📁account
+                └── account.dart
+                └── account.freezed.dart
+                └── account.g.dart
+            └── 📁client
+                └── client.dart
+                └── client.freezed.dart
+                └── client.g.dart
+            └── 📁report
+                └── report.dart
+                └── report.freezed.dart
+                └── report.g.dart
+            └── 📁transaction
+                └── transaction.dart
+                └── transaction.freezed.dart
+                └── transaction.g.dart
+        ├── use_cases
+    └── 📁framework
+        └── 📁analytics
+        └── 📁repository
+            └── 📁implementation
+                └── home_repository_impl.dart
+                └── login_repository_impl.dart
+            └── 📁interface
+                └── i_home_repository.dart
+                └── i_login_repository.dart
+    └── main.dart
+    └── 📁ui
+        └── 📁appbar
+            └── appbar_builder.dart
+        └── 📁buttons
+            └── primary_button.dart
+            └── secondary_button.dart
+        └── 📁cards
+            └── neumorphism_card.dart
+        └── 📁drawers
+            └── home_drawer.dart
+        └── 📁form_fields
+            └── email_form_field.dart
+            └── password_form_field.dart
+        └── 📁scaffolds
+            └── background_scaffold.dart
+            └── home_scaffold.dart
+        └── 📁theme
+            └── theme.dart
+    └── 📁utils
+        └── 📁extension
+            └── 📁navigation
+                └── navigation_extension.dart
+            └── 📁widget
+                └── widget_extension.dart
+        └── 📁navigation
+            └── navigation.dart
+        └── 📁results
+            └── 📁failure_entity
+                └── failure_entity.dart
+                └── failure_entity.freezed.dart
+            └── results.dart
+        └── ui_event.dart
+    └── 📁views
+        └── 📁home
+            └── home_page.dart
+            └── home_screen.dart
+            └── 📁widgets
+                └── balance_card.dart
+        └── 📁login
+            └── login_page.dart
+            └── login_screen.dart
+        ├── transactions
+```
