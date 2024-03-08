@@ -40,118 +40,119 @@ class TransactionPage extends StatelessWidget {
               ),
               const SizedBox(height: 24),
               Expanded(
+                flex: 10,
                 child: NeumorphismCard(
-                  child: ListView.builder(
-                    itemCount: state.transactions.length,
-                    itemBuilder: (context, index) {
-                      return Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Text(
-                            "# ${state.transactions[index].id}",
-                            style: context
-                                .theme()
-                                .textTheme
-                                .titleMedium!
-                                .copyWith(decoration: TextDecoration.underline),
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  child: Column(
+                    children: [
+                      Flexible(
+                          flex: 1,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Text(
-                                df
-                                    .format(state.transactions[index].date)
-                                    .toString(),
-                                style: context.theme().textTheme.titleMedium,
+                              CircleButton(
+                                icon: Icons.add,
+                                text: TransactionType.withdrawal.value,
+                                onPressed: () {},
                               ),
-                              Text(
-                                "# ${state.transactions[index].accountId}",
-                                style: context.theme().textTheme.titleSmall,
+                              CircleButton(
+                                icon: Icons.add,
+                                text: TransactionType.consignment.value,
+                                onPressed: () {},
+                              ),
+                              CircleButton(
+                                icon: Icons.move_down_outlined,
+                                text: "TRANSFER",
+                                onPressed: () {},
                               ),
                             ],
-                          ),
-                          const SizedBox(height: 8),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceAround,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Text(
-                                state.transactions[index].type.value,
-                                style: context
-                                    .theme()
-                                    .textTheme
-                                    .titleMedium!
-                                    .copyWith(
-                                      color: state.transactions[index].type ==
-                                              TransactionType.consignment
-                                          ? Colors.green
-                                          : Colors.red,
+                          )),
+                      const Divider(),
+                      Expanded(
+                        flex: 4,
+                        child: ListView.builder(
+                          itemCount: state.transactions.length,
+                          itemBuilder: (context, index) {
+                            return Column(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Text(
+                                  "# ${state.transactions[index].id}",
+                                  style: context
+                                      .theme()
+                                      .textTheme
+                                      .titleMedium!
+                                      .copyWith(
+                                          decoration: TextDecoration.underline),
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceAround,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    Text(
+                                      df
+                                          .format(
+                                              state.transactions[index].date)
+                                          .toString(),
+                                      style:
+                                          context.theme().textTheme.titleMedium,
                                     ),
-                              ),
-                              Text(
-                                " \$ ${state.transactions[index].value}",
-                                style: context.theme().textTheme.titleSmall,
-                              )
-                            ],
-                          ),
-                          const Divider(),
-                        ],
-                      );
-                    },
-                  ),
-                ),
-              ),
-              const SizedBox(height: 16),
-              Expanded(
-                child: NeumorphismCard(
-                  child: Container(
-                    padding: const EdgeInsets.all(8),
-                    width: double.infinity,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Text(
-                          "New Transaction",
-                          style: context.theme().textTheme.titleLarge,
+                                    Text(
+                                      "# ${state.transactions[index].accountId}",
+                                      style:
+                                          context.theme().textTheme.titleSmall,
+                                    ),
+                                  ],
+                                ),
+                                const SizedBox(height: 8),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceAround,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    Text(
+                                      state.transactions[index].type.value,
+                                      style: context
+                                          .theme()
+                                          .textTheme
+                                          .titleMedium!
+                                          .copyWith(
+                                            color: state.transactions[index]
+                                                        .type ==
+                                                    TransactionType.consignment
+                                                ? Colors.green
+                                                : Colors.red,
+                                          ),
+                                    ),
+                                    Text(
+                                      " \$ ${state.transactions[index].value}",
+                                      style:
+                                          context.theme().textTheme.titleSmall,
+                                    )
+                                  ],
+                                ),
+                                const Divider(
+                                  thickness: .1,
+                                ),
+                              ],
+                            );
+                          },
                         ),
-                        const SizedBox(height: 24),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            CircleButton(
-                              icon: Icons.add,
-                              text: TransactionType.withdrawal.value,
-                              onPressed: () {},
-                            ),
-                            CircleButton(
-                              icon: Icons.add,
-                              text: TransactionType.consignment.value,
-                              onPressed: () {},
-                            ),
-                            CircleButton(
-                              icon: Icons.move_down_outlined,
-                              text: "TRANSFER",
-                              onPressed: () {},
-                            ),
-                          ],
-                        )
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
                 ),
               ),
-              const Spacer(),
+              const Spacer(flex: 1),
               Align(
                 alignment: Alignment.bottomCenter,
                 child: PrimaryButton(
                   isEnabled: !state.isLoading,
                   onPressed: () {},
                   text: "REPORTS",
-                ), 
+                ),
               )
             ],
           ),
