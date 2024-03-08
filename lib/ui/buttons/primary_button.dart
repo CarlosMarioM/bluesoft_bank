@@ -19,7 +19,7 @@ class PrimaryButton extends StatelessWidget {
         padding:
             EdgeInsets.only(bottom: MediaQuery.viewInsetsOf(context).bottom),
         child: ElevatedButton(
-          onPressed: onPressed,
+          onPressed: isEnabled ? onPressed : null,
           child: Text(
             text,
             style: const TextStyle(letterSpacing: 4),

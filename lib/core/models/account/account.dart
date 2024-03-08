@@ -4,7 +4,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 part 'account.freezed.dart';
 part 'account.g.dart';
 
-@freezed
+@Freezed(toJson: true)
 class Account with _$Account {
   static const _kAccountMinimum = 1000;
   const factory Account({

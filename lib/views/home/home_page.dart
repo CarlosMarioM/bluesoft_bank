@@ -1,4 +1,5 @@
 import 'package:bluesoft_bank/bloc/home_bloc/home_bloc.dart';
+import 'package:bluesoft_bank/core/models/client/client.dart';
 import 'package:bluesoft_bank/views/home/home_screen.dart';
 import 'package:bluesoft_bank/views/home/widgets/balance_card.dart';
 import 'package:bluesoft_bank/ui/scaffolds/home_scaffold.dart';
@@ -11,8 +12,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'widgets/accounts_card.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({super.key});
-
+  const HomePage({super.key, required this.client});
+  final Client client;
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<HomeBloc, HomeState>(
@@ -31,7 +32,7 @@ class HomePage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    "Wellcome Back!",
+                    "Welcome Back!",
                     style: Theme.of(context).textTheme.headlineLarge,
                     textAlign: TextAlign.justify,
                   ),
@@ -46,7 +47,7 @@ class HomePage extends StatelessWidget {
                   )
                 ],
               ),
-              const Divider(),
+              const SizedBox(height: 8),
               BalanceCard(totalBalance: state.totalBalance ?? 0),
               const SizedBox(height: 16),
               Flexible(
@@ -58,7 +59,11 @@ class HomePage extends StatelessWidget {
                 alignment: Alignment.bottomCenter,
                 child: PrimaryButton(
                   isEnabled: !state.isLoading,
-                  onPressed: () {},
+                  onPressed: () => context.read<HomeBloc>().add(
+                        HomeEvent.navigateTransactions(
+                          state.accounts!.peek(),
+                        ),
+                      ),
                   text: "WITHDRAW",
                 ),
               ),

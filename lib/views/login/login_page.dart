@@ -44,6 +44,7 @@ class _LoginPageState extends State<LoginPage> {
           appBar: AppbarBuilder.clean(
             actions: [],
             title: "Bluesoft Bank",
+            leading: const SizedBox(),
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,

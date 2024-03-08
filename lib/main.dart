@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 
 import 'bluesoft_bank.dart';
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  configureDependencies();
+  await configureDependencies();
   runApp(const BluesoftBank());
 }

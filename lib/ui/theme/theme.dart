@@ -34,7 +34,9 @@ class Theming {
         appBarTheme: const AppBarTheme(
           centerTitle: true,
           backgroundColor: Colors.black,
-          iconTheme: IconThemeData.fallback(),
+          iconTheme: IconThemeData(
+            color: Colors.white,
+          ),
           titleTextStyle: TextStyle(
             color: Colors.white70,
           ),
@@ -132,7 +134,7 @@ class Theming {
 }
 
 extension AppTheme on BuildContext {
-  theme() {
+  ThemeData theme() {
     return Theme.of(this);
   }
 }

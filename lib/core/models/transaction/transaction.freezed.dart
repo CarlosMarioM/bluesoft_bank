@@ -20,8 +20,8 @@ Transaction _$TransactionFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Transaction {
-  String get transactionId => throw _privateConstructorUsedError;
-  TransactionType get transactionType => throw _privateConstructorUsedError;
+  String get id => throw _privateConstructorUsedError;
+  TransactionType get type => throw _privateConstructorUsedError;
   double get value => throw _privateConstructorUsedError;
   DateTime get date => throw _privateConstructorUsedError;
   String get accountId => throw _privateConstructorUsedError;
@@ -39,8 +39,8 @@ abstract class $TransactionCopyWith<$Res> {
       _$TransactionCopyWithImpl<$Res, Transaction>;
   @useResult
   $Res call(
-      {String transactionId,
-      TransactionType transactionType,
+      {String id,
+      TransactionType type,
       double value,
       DateTime date,
       String accountId});
@@ -59,20 +59,20 @@ class _$TransactionCopyWithImpl<$Res, $Val extends Transaction>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? transactionId = null,
-    Object? transactionType = null,
+    Object? id = null,
+    Object? type = null,
     Object? value = null,
     Object? date = null,
     Object? accountId = null,
   }) {
     return _then(_value.copyWith(
-      transactionId: null == transactionId
-          ? _value.transactionId
-          : transactionId // ignore: cast_nullable_to_non_nullable
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
               as String,
-      transactionType: null == transactionType
-          ? _value.transactionType
-          : transactionType // ignore: cast_nullable_to_non_nullable
+      type: null == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
               as TransactionType,
       value: null == value
           ? _value.value
@@ -99,8 +99,8 @@ abstract class _$$TransactionImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String transactionId,
-      TransactionType transactionType,
+      {String id,
+      TransactionType type,
       double value,
       DateTime date,
       String accountId});
@@ -117,20 +117,20 @@ class __$$TransactionImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? transactionId = null,
-    Object? transactionType = null,
+    Object? id = null,
+    Object? type = null,
     Object? value = null,
     Object? date = null,
     Object? accountId = null,
   }) {
     return _then(_$TransactionImpl(
-      transactionId: null == transactionId
-          ? _value.transactionId
-          : transactionId // ignore: cast_nullable_to_non_nullable
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
               as String,
-      transactionType: null == transactionType
-          ? _value.transactionType
-          : transactionType // ignore: cast_nullable_to_non_nullable
+      type: null == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
               as TransactionType,
       value: null == value
           ? _value.value
@@ -152,8 +152,8 @@ class __$$TransactionImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$TransactionImpl implements _Transaction {
   const _$TransactionImpl(
-      {required this.transactionId,
-      required this.transactionType,
+      {required this.id,
+      required this.type,
       required this.value,
       required this.date,
       required this.accountId});
@@ -162,9 +162,9 @@ class _$TransactionImpl implements _Transaction {
       _$$TransactionImplFromJson(json);
 
   @override
-  final String transactionId;
+  final String id;
   @override
-  final TransactionType transactionType;
+  final TransactionType type;
   @override
   final double value;
   @override
@@ -174,7 +174,7 @@ class _$TransactionImpl implements _Transaction {
 
   @override
   String toString() {
-    return 'Transaction(transactionId: $transactionId, transactionType: $transactionType, value: $value, date: $date, accountId: $accountId)';
+    return 'Transaction(id: $id, type: $type, value: $value, date: $date, accountId: $accountId)';
   }
 
   @override
@@ -182,10 +182,8 @@ class _$TransactionImpl implements _Transaction {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TransactionImpl &&
-            (identical(other.transactionId, transactionId) ||
-                other.transactionId == transactionId) &&
-            (identical(other.transactionType, transactionType) ||
-                other.transactionType == transactionType) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.type, type) || other.type == type) &&
             (identical(other.value, value) || other.value == value) &&
             (identical(other.date, date) || other.date == date) &&
             (identical(other.accountId, accountId) ||
@@ -194,8 +192,8 @@ class _$TransactionImpl implements _Transaction {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, transactionId, transactionType, value, date, accountId);
+  int get hashCode =>
+      Object.hash(runtimeType, id, type, value, date, accountId);
 
   @JsonKey(ignore: true)
   @override
@@ -213,8 +211,8 @@ class _$TransactionImpl implements _Transaction {
 
 abstract class _Transaction implements Transaction {
   const factory _Transaction(
-      {required final String transactionId,
-      required final TransactionType transactionType,
+      {required final String id,
+      required final TransactionType type,
       required final double value,
       required final DateTime date,
       required final String accountId}) = _$TransactionImpl;
@@ -223,9 +221,9 @@ abstract class _Transaction implements Transaction {
       _$TransactionImpl.fromJson;
 
   @override
-  String get transactionId;
+  String get id;
   @override
-  TransactionType get transactionType;
+  TransactionType get type;
   @override
   double get value;
   @override

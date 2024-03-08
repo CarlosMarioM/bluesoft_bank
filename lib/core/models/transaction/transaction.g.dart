@@ -8,9 +8,8 @@ part of 'transaction.dart';
 
 _$TransactionImpl _$$TransactionImplFromJson(Map<String, dynamic> json) =>
     _$TransactionImpl(
-      transactionId: json['transactionId'] as String,
-      transactionType:
-          $enumDecode(_$TransactionTypeEnumMap, json['transactionType']),
+      id: json['id'] as String,
+      type: $enumDecode(_$TransactionTypeEnumMap, json['type']),
       value: (json['value'] as num).toDouble(),
       date: DateTime.parse(json['date'] as String),
       accountId: json['accountId'] as String,
@@ -18,14 +17,14 @@ _$TransactionImpl _$$TransactionImplFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$TransactionImplToJson(_$TransactionImpl instance) =>
     <String, dynamic>{
-      'transactionId': instance.transactionId,
-      'transactionType': _$TransactionTypeEnumMap[instance.transactionType]!,
+      'id': instance.id,
+      'type': _$TransactionTypeEnumMap[instance.type]!,
       'value': instance.value,
       'date': instance.date.toIso8601String(),
       'accountId': instance.accountId,
     };
 
 const _$TransactionTypeEnumMap = {
-  TransactionType.consigment: 'consigment',
+  TransactionType.consignment: 'consignment',
   TransactionType.withdrawal: 'withdrawal',
 };

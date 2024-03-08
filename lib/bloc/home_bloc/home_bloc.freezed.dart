@@ -16,42 +16,49 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$HomeEvent {
-  String get cliendId => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(String cliendId) initial,
+    required TResult Function(String clientId) initial,
+    required TResult Function(List<Account> clientId) navigateTransactions,
+    required TResult Function() logout,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String cliendId)? initial,
+    TResult? Function(String clientId)? initial,
+    TResult? Function(List<Account> clientId)? navigateTransactions,
+    TResult? Function()? logout,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String cliendId)? initial,
+    TResult Function(String clientId)? initial,
+    TResult Function(List<Account> clientId)? navigateTransactions,
+    TResult Function()? logout,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
+    required TResult Function(_NavigateTransactions value) navigateTransactions,
+    required TResult Function(_Logout value) logout,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
+    TResult? Function(_NavigateTransactions value)? navigateTransactions,
+    TResult? Function(_Logout value)? logout,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
+    TResult Function(_NavigateTransactions value)? navigateTransactions,
+    TResult Function(_Logout value)? logout,
     required TResult orElse(),
   }) =>
-      throw _privateConstructorUsedError;
-
-  @JsonKey(ignore: true)
-  $HomeEventCopyWith<HomeEvent> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -59,8 +66,6 @@ mixin _$HomeEvent {
 abstract class $HomeEventCopyWith<$Res> {
   factory $HomeEventCopyWith(HomeEvent value, $Res Function(HomeEvent) then) =
       _$HomeEventCopyWithImpl<$Res, HomeEvent>;
-  @useResult
-  $Res call({String cliendId});
 }
 
 /// @nodoc
@@ -72,30 +77,15 @@ class _$HomeEventCopyWithImpl<$Res, $Val extends HomeEvent>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? cliendId = null,
-  }) {
-    return _then(_value.copyWith(
-      cliendId: null == cliendId
-          ? _value.cliendId
-          : cliendId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
-  }
 }
 
 /// @nodoc
-abstract class _$$InitialImplCopyWith<$Res>
-    implements $HomeEventCopyWith<$Res> {
+abstract class _$$InitialImplCopyWith<$Res> {
   factory _$$InitialImplCopyWith(
           _$InitialImpl value, $Res Function(_$InitialImpl) then) =
       __$$InitialImplCopyWithImpl<$Res>;
-  @override
   @useResult
-  $Res call({String cliendId});
+  $Res call({String clientId});
 }
 
 /// @nodoc
@@ -109,12 +99,12 @@ class __$$InitialImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? cliendId = null,
+    Object? clientId = null,
   }) {
     return _then(_$InitialImpl(
-      null == cliendId
-          ? _value.cliendId
-          : cliendId // ignore: cast_nullable_to_non_nullable
+      null == clientId
+          ? _value.clientId
+          : clientId // ignore: cast_nullable_to_non_nullable
               as String,
     ));
   }
@@ -123,14 +113,14 @@ class __$$InitialImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$InitialImpl implements _Initial {
-  const _$InitialImpl(this.cliendId);
+  const _$InitialImpl(this.clientId);
 
   @override
-  final String cliendId;
+  final String clientId;
 
   @override
   String toString() {
-    return 'HomeEvent.initial(cliendId: $cliendId)';
+    return 'HomeEvent.initial(clientId: $clientId)';
   }
 
   @override
@@ -138,12 +128,12 @@ class _$InitialImpl implements _Initial {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$InitialImpl &&
-            (identical(other.cliendId, cliendId) ||
-                other.cliendId == cliendId));
+            (identical(other.clientId, clientId) ||
+                other.clientId == clientId));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, cliendId);
+  int get hashCode => Object.hash(runtimeType, clientId);
 
   @JsonKey(ignore: true)
   @override
@@ -154,27 +144,33 @@ class _$InitialImpl implements _Initial {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(String cliendId) initial,
+    required TResult Function(String clientId) initial,
+    required TResult Function(List<Account> clientId) navigateTransactions,
+    required TResult Function() logout,
   }) {
-    return initial(cliendId);
+    return initial(clientId);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String cliendId)? initial,
+    TResult? Function(String clientId)? initial,
+    TResult? Function(List<Account> clientId)? navigateTransactions,
+    TResult? Function()? logout,
   }) {
-    return initial?.call(cliendId);
+    return initial?.call(clientId);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String cliendId)? initial,
+    TResult Function(String clientId)? initial,
+    TResult Function(List<Account> clientId)? navigateTransactions,
+    TResult Function()? logout,
     required TResult orElse(),
   }) {
     if (initial != null) {
-      return initial(cliendId);
+      return initial(clientId);
     }
     return orElse();
   }
@@ -183,6 +179,8 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
+    required TResult Function(_NavigateTransactions value) navigateTransactions,
+    required TResult Function(_Logout value) logout,
   }) {
     return initial(this);
   }
@@ -191,6 +189,8 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
+    TResult? Function(_NavigateTransactions value)? navigateTransactions,
+    TResult? Function(_Logout value)? logout,
   }) {
     return initial?.call(this);
   }
@@ -199,6 +199,8 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
+    TResult Function(_NavigateTransactions value)? navigateTransactions,
+    TResult Function(_Logout value)? logout,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -209,14 +211,269 @@ class _$InitialImpl implements _Initial {
 }
 
 abstract class _Initial implements HomeEvent {
-  const factory _Initial(final String cliendId) = _$InitialImpl;
+  const factory _Initial(final String clientId) = _$InitialImpl;
 
-  @override
-  String get cliendId;
-  @override
+  String get clientId;
   @JsonKey(ignore: true)
   _$$InitialImplCopyWith<_$InitialImpl> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$NavigateTransactionsImplCopyWith<$Res> {
+  factory _$$NavigateTransactionsImplCopyWith(_$NavigateTransactionsImpl value,
+          $Res Function(_$NavigateTransactionsImpl) then) =
+      __$$NavigateTransactionsImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({List<Account> clientId});
+}
+
+/// @nodoc
+class __$$NavigateTransactionsImplCopyWithImpl<$Res>
+    extends _$HomeEventCopyWithImpl<$Res, _$NavigateTransactionsImpl>
+    implements _$$NavigateTransactionsImplCopyWith<$Res> {
+  __$$NavigateTransactionsImplCopyWithImpl(_$NavigateTransactionsImpl _value,
+      $Res Function(_$NavigateTransactionsImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? clientId = null,
+  }) {
+    return _then(_$NavigateTransactionsImpl(
+      null == clientId
+          ? _value._clientId
+          : clientId // ignore: cast_nullable_to_non_nullable
+              as List<Account>,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$NavigateTransactionsImpl implements _NavigateTransactions {
+  const _$NavigateTransactionsImpl(final List<Account> clientId)
+      : _clientId = clientId;
+
+  final List<Account> _clientId;
+  @override
+  List<Account> get clientId {
+    if (_clientId is EqualUnmodifiableListView) return _clientId;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_clientId);
+  }
+
+  @override
+  String toString() {
+    return 'HomeEvent.navigateTransactions(clientId: $clientId)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$NavigateTransactionsImpl &&
+            const DeepCollectionEquality().equals(other._clientId, _clientId));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_clientId));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$NavigateTransactionsImplCopyWith<_$NavigateTransactionsImpl>
+      get copyWith =>
+          __$$NavigateTransactionsImplCopyWithImpl<_$NavigateTransactionsImpl>(
+              this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String clientId) initial,
+    required TResult Function(List<Account> clientId) navigateTransactions,
+    required TResult Function() logout,
+  }) {
+    return navigateTransactions(clientId);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String clientId)? initial,
+    TResult? Function(List<Account> clientId)? navigateTransactions,
+    TResult? Function()? logout,
+  }) {
+    return navigateTransactions?.call(clientId);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String clientId)? initial,
+    TResult Function(List<Account> clientId)? navigateTransactions,
+    TResult Function()? logout,
+    required TResult orElse(),
+  }) {
+    if (navigateTransactions != null) {
+      return navigateTransactions(clientId);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_NavigateTransactions value) navigateTransactions,
+    required TResult Function(_Logout value) logout,
+  }) {
+    return navigateTransactions(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_NavigateTransactions value)? navigateTransactions,
+    TResult? Function(_Logout value)? logout,
+  }) {
+    return navigateTransactions?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_NavigateTransactions value)? navigateTransactions,
+    TResult Function(_Logout value)? logout,
+    required TResult orElse(),
+  }) {
+    if (navigateTransactions != null) {
+      return navigateTransactions(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _NavigateTransactions implements HomeEvent {
+  const factory _NavigateTransactions(final List<Account> clientId) =
+      _$NavigateTransactionsImpl;
+
+  List<Account> get clientId;
+  @JsonKey(ignore: true)
+  _$$NavigateTransactionsImplCopyWith<_$NavigateTransactionsImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$LogoutImplCopyWith<$Res> {
+  factory _$$LogoutImplCopyWith(
+          _$LogoutImpl value, $Res Function(_$LogoutImpl) then) =
+      __$$LogoutImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$LogoutImplCopyWithImpl<$Res>
+    extends _$HomeEventCopyWithImpl<$Res, _$LogoutImpl>
+    implements _$$LogoutImplCopyWith<$Res> {
+  __$$LogoutImplCopyWithImpl(
+      _$LogoutImpl _value, $Res Function(_$LogoutImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$LogoutImpl implements _Logout {
+  const _$LogoutImpl();
+
+  @override
+  String toString() {
+    return 'HomeEvent.logout()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$LogoutImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String clientId) initial,
+    required TResult Function(List<Account> clientId) navigateTransactions,
+    required TResult Function() logout,
+  }) {
+    return logout();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String clientId)? initial,
+    TResult? Function(List<Account> clientId)? navigateTransactions,
+    TResult? Function()? logout,
+  }) {
+    return logout?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String clientId)? initial,
+    TResult Function(List<Account> clientId)? navigateTransactions,
+    TResult Function()? logout,
+    required TResult orElse(),
+  }) {
+    if (logout != null) {
+      return logout();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_NavigateTransactions value) navigateTransactions,
+    required TResult Function(_Logout value) logout,
+  }) {
+    return logout(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_NavigateTransactions value)? navigateTransactions,
+    TResult? Function(_Logout value)? logout,
+  }) {
+    return logout?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_NavigateTransactions value)? navigateTransactions,
+    TResult Function(_Logout value)? logout,
+    required TResult orElse(),
+  }) {
+    if (logout != null) {
+      return logout(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _Logout implements HomeEvent {
+  const factory _Logout() = _$LogoutImpl;
 }
 
 /// @nodoc
@@ -224,6 +481,9 @@ mixin _$HomeState {
   bool get isLoading => throw _privateConstructorUsedError;
   num? get totalBalance => throw _privateConstructorUsedError;
   UiEvent<List<Account>>? get accounts => throw _privateConstructorUsedError;
+  UiEvent<Nothing>? get logout => throw _privateConstructorUsedError;
+  UiEvent<List<Account>>? get navigateTransactions =>
+      throw _privateConstructorUsedError;
   UiEvent<Nothing>? get error => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -240,6 +500,8 @@ abstract class $HomeStateCopyWith<$Res> {
       {bool isLoading,
       num? totalBalance,
       UiEvent<List<Account>>? accounts,
+      UiEvent<Nothing>? logout,
+      UiEvent<List<Account>>? navigateTransactions,
       UiEvent<Nothing>? error});
 }
 
@@ -259,6 +521,8 @@ class _$HomeStateCopyWithImpl<$Res, $Val extends HomeState>
     Object? isLoading = null,
     Object? totalBalance = freezed,
     Object? accounts = freezed,
+    Object? logout = freezed,
+    Object? navigateTransactions = freezed,
     Object? error = freezed,
   }) {
     return _then(_value.copyWith(
@@ -273,6 +537,14 @@ class _$HomeStateCopyWithImpl<$Res, $Val extends HomeState>
       accounts: freezed == accounts
           ? _value.accounts
           : accounts // ignore: cast_nullable_to_non_nullable
+              as UiEvent<List<Account>>?,
+      logout: freezed == logout
+          ? _value.logout
+          : logout // ignore: cast_nullable_to_non_nullable
+              as UiEvent<Nothing>?,
+      navigateTransactions: freezed == navigateTransactions
+          ? _value.navigateTransactions
+          : navigateTransactions // ignore: cast_nullable_to_non_nullable
               as UiEvent<List<Account>>?,
       error: freezed == error
           ? _value.error
@@ -294,6 +566,8 @@ abstract class _$$HomeStateImplCopyWith<$Res>
       {bool isLoading,
       num? totalBalance,
       UiEvent<List<Account>>? accounts,
+      UiEvent<Nothing>? logout,
+      UiEvent<List<Account>>? navigateTransactions,
       UiEvent<Nothing>? error});
 }
 
@@ -311,6 +585,8 @@ class __$$HomeStateImplCopyWithImpl<$Res>
     Object? isLoading = null,
     Object? totalBalance = freezed,
     Object? accounts = freezed,
+    Object? logout = freezed,
+    Object? navigateTransactions = freezed,
     Object? error = freezed,
   }) {
     return _then(_$HomeStateImpl(
@@ -326,6 +602,14 @@ class __$$HomeStateImplCopyWithImpl<$Res>
           ? _value.accounts
           : accounts // ignore: cast_nullable_to_non_nullable
               as UiEvent<List<Account>>?,
+      logout: freezed == logout
+          ? _value.logout
+          : logout // ignore: cast_nullable_to_non_nullable
+              as UiEvent<Nothing>?,
+      navigateTransactions: freezed == navigateTransactions
+          ? _value.navigateTransactions
+          : navigateTransactions // ignore: cast_nullable_to_non_nullable
+              as UiEvent<List<Account>>?,
       error: freezed == error
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
@@ -338,7 +622,12 @@ class __$$HomeStateImplCopyWithImpl<$Res>
 
 class _$HomeStateImpl implements _HomeState {
   const _$HomeStateImpl(
-      {this.isLoading = false, this.totalBalance, this.accounts, this.error});
+      {this.isLoading = false,
+      this.totalBalance,
+      this.accounts,
+      this.logout,
+      this.navigateTransactions,
+      this.error});
 
   @override
   @JsonKey()
@@ -348,11 +637,15 @@ class _$HomeStateImpl implements _HomeState {
   @override
   final UiEvent<List<Account>>? accounts;
   @override
+  final UiEvent<Nothing>? logout;
+  @override
+  final UiEvent<List<Account>>? navigateTransactions;
+  @override
   final UiEvent<Nothing>? error;
 
   @override
   String toString() {
-    return 'HomeState(isLoading: $isLoading, totalBalance: $totalBalance, accounts: $accounts, error: $error)';
+    return 'HomeState(isLoading: $isLoading, totalBalance: $totalBalance, accounts: $accounts, logout: $logout, navigateTransactions: $navigateTransactions, error: $error)';
   }
 
   @override
@@ -366,12 +659,15 @@ class _$HomeStateImpl implements _HomeState {
                 other.totalBalance == totalBalance) &&
             (identical(other.accounts, accounts) ||
                 other.accounts == accounts) &&
+            (identical(other.logout, logout) || other.logout == logout) &&
+            (identical(other.navigateTransactions, navigateTransactions) ||
+                other.navigateTransactions == navigateTransactions) &&
             (identical(other.error, error) || other.error == error));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, isLoading, totalBalance, accounts, error);
+  int get hashCode => Object.hash(runtimeType, isLoading, totalBalance,
+      accounts, logout, navigateTransactions, error);
 
   @JsonKey(ignore: true)
   @override
@@ -385,6 +681,8 @@ abstract class _HomeState implements HomeState {
       {final bool isLoading,
       final num? totalBalance,
       final UiEvent<List<Account>>? accounts,
+      final UiEvent<Nothing>? logout,
+      final UiEvent<List<Account>>? navigateTransactions,
       final UiEvent<Nothing>? error}) = _$HomeStateImpl;
 
   @override
@@ -393,6 +691,10 @@ abstract class _HomeState implements HomeState {
   num? get totalBalance;
   @override
   UiEvent<List<Account>>? get accounts;
+  @override
+  UiEvent<Nothing>? get logout;
+  @override
+  UiEvent<List<Account>>? get navigateTransactions;
   @override
   UiEvent<Nothing>? get error;
   @override

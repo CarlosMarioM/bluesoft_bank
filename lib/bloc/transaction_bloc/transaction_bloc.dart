@@ -1,4 +1,4 @@
-import 'package:bluesoft_bank/framework/repository/interface/i_transaction_repository.dart';
+import 'package:bluesoft_bank/repository/interface/i_transaction_repository.dart';
 import 'package:bluesoft_bank/core/models/transaction/transaction.dart';
 import 'package:bluesoft_bank/core/models/account/account.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';

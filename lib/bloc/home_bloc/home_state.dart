@@ -6,6 +6,8 @@ class HomeState with _$HomeState {
     @Default(false) bool isLoading,
     num? totalBalance,
     UiEvent<List<Account>>? accounts,
+    UiEvent<Nothing>? logout,
+    UiEvent<List<Account>>? navigateTransactions,
     UiEvent<Nothing>? error,
   }) = _HomeState;
 }

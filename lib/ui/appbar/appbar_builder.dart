@@ -5,6 +5,8 @@ class AppbarBuilder {
   static PreferredSizeWidget clean({
     required List<Widget> actions,
     required String title,
+    Widget? leading,
+    VoidCallback? navigateBack,
   }) {
     return AppBar(
       title: Text(
@@ -13,6 +15,11 @@ class AppbarBuilder {
       elevation: 1,
       actions: actions,
       leadingWidth: 80,
+      leading: leading ??
+          InkWell(
+            onTap: () => navigateBack?.call(),
+            child: const Icon(Icons.arrow_back),
+          ),
     );
   }
 
@@ -33,7 +40,6 @@ class AppbarBuilder {
             : homeScaffoldKey.currentState!.openEndDrawer(),
         child: const Icon(
           Icons.menu,
-          color: Colors.white,
         ),
       ),
     );

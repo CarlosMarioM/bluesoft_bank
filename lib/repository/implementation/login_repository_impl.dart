@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:bluesoft_bank/core/models/client/client.dart';
-import 'package:bluesoft_bank/framework/repository/interface/i_login_repository.dart';
+import 'package:bluesoft_bank/repository/interface/i_login_repository.dart';
 import 'package:bluesoft_bank/utils/results/failure_entity/failure_entity.dart';
 import 'package:bluesoft_bank/utils/results/results.dart';
 import 'package:flutter/services.dart';

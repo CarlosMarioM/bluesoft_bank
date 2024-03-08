@@ -13,6 +13,7 @@ class HomeDrawer extends StatelessWidget {
       child: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             PrimaryButton(
               isEnabled: true,
@@ -22,12 +23,12 @@ class HomeDrawer extends StatelessWidget {
             PrimaryButton(
               isEnabled: true,
               onPressed: () => homeScaffoldKey.currentState!.closeEndDrawer(),
-              text: 'REPORTS',
+              text: 'SETTINGS',
             ),
             PrimaryButton(
               isEnabled: true,
               onPressed: () => homeScaffoldKey.currentState!.closeEndDrawer(),
-              text: 'SETTINGS',
+              text: 'REPORTS',
             ),
             PrimaryButton(
               isEnabled: true,

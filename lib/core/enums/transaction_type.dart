@@ -1,6 +1,6 @@
 enum TransactionType {
-  consigment("Consigment"),
-  withdrawal("Withdrawal");
+  consignment("consignment"),
+  withdrawal("withdrawal");
 
   final String value;
   const TransactionType(this.value);
