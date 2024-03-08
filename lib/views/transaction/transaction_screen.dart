@@ -7,6 +7,8 @@ import 'package:bluesoft_bank/core/di/di.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter/material.dart';
 
+import 'withdrawal/withdrawal_screen.dart';
+
 class TransactionScreen extends StatelessWidget {
   const TransactionScreen({super.key, required this.accounts});
   static const String route = "Transaction Screen";
@@ -21,7 +23,17 @@ class TransactionScreen extends StatelessWidget {
             context.pop();
           }
         },
-        child: const TransactionPage(),
+        child: BlocListener<TransactionBloc, TransactionState>(
+          listener: (context, state) {
+            if (state.navigateWithdrawal?.consume() != null) {
+              context.pushNamed(routeName: WithdrawalScreen.route);
+            }
+            if (state.navigateConsigment?.consume() != null) {
+              context.pushNamed(routeName: WithdrawalScreen.route);
+            }
+          },
+          child: const TransactionPage(),
+        ),
       ),
     );
   }

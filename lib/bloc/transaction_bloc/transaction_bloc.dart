@@ -18,37 +18,45 @@ class TransactionBloc extends Bloc<TransactionEvent, TransactionState> {
     on<TransactionEvent>(
       (event, emit) async {
         await event.when(
-          started: (List<Account> accounts) async {
-            emit(state.copyWith(isLoading: true));
-            final List<Transaction> transactions = [];
-            final List<Future> futures = [];
-
-            for (Account account in accounts) {
-              futures.add(_transactionRepository.fetchTransactions(account.id));
-            }
-
-            final List results = await Future.wait(futures);
-
-            if (results.isNotEmpty &&
-                results.any((element) => element is Success)) {
-              results.removeWhere((element) => element is Failure);
-
-              for (Success result in results) {
-                transactions.addAll(result.value);
-              }
-            } else {
-              emit(state.copyWith(error: UiEvent.nothing));
-              return;
-            }
-            emit(state.copyWith(transactions: transactions, isLoading: false));
-          },
+          started: (accounts) => _started(accounts, emit),
           navigateBack: () async => emit(
             state.copyWith(navigateBack: UiEvent.nothing),
+          ),
+          navigateConsigment: () async => emit(
+            state.copyWith(navigateConsigment: UiEvent.nothing),
+          ),
+          navigateWithdrawal: () async => emit(
+            state.copyWith(navigateWithdrawal: UiEvent.nothing),
           ),
         );
       },
     );
   }
+
+  _started(List<Account> accounts, Emitter<TransactionState> emit) async {
+    emit(state.copyWith(isLoading: true));
+    final List<Transaction> transactions = [];
+    final List<Future> futures = [];
+
+    for (Account account in accounts) {
+      futures.add(_transactionRepository.fetchTransactions(account.id));
+    }
+
+    final List results = await Future.wait(futures);
+
+    if (results.isNotEmpty && results.any((element) => element is Success)) {
+      results.removeWhere((element) => element is Failure);
+
+      for (Success result in results) {
+        transactions.addAll(result.value);
+      }
+    } else {
+      emit(state.copyWith(error: UiEvent.nothing));
+      return;
+    }
+    emit(state.copyWith(transactions: transactions, isLoading: false));
+  }
+
   @override
   void add(TransactionEvent event) {
     if (!isClosed) {

@@ -53,12 +53,18 @@ class TransactionPage extends StatelessWidget {
                               CircleButton(
                                 icon: Icons.add,
                                 text: TransactionType.withdrawal.value,
-                                onPressed: () {},
+                                onPressed: () => context
+                                    .read<TransactionBloc>()
+                                    .add(const TransactionEvent
+                                        .navigateWithdrawal()),
                               ),
                               CircleButton(
                                 icon: Icons.add,
                                 text: TransactionType.consignment.value,
-                                onPressed: () {},
+                                onPressed: () => context
+                                    .read<TransactionBloc>()
+                                    .add(const TransactionEvent
+                                        .navigateConsigment()),
                               ),
                               CircleButton(
                                 icon: Icons.move_down_outlined,

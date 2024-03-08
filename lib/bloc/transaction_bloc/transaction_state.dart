@@ -6,6 +6,9 @@ class TransactionState with _$TransactionState {
     @Default(false) bool isLoading,
     @Default([]) List<Transaction> transactions,
     UiEvent<Nothing>? navigateBack,
+    UiEvent<Nothing>? navigateWithdrawal,
+    UiEvent<Nothing>? navigateConsigment,
+    UiEvent<Nothing>? navigateTransfer,
     UiEvent<Nothing>? error,
   }) = _TransactionState;
 }

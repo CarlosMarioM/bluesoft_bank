@@ -20,18 +20,24 @@ mixin _$TransactionEvent {
   TResult when<TResult extends Object?>({
     required TResult Function(List<Account> accounts) started,
     required TResult Function() navigateBack,
+    required TResult Function() navigateWithdrawal,
+    required TResult Function() navigateConsigment,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(List<Account> accounts)? started,
     TResult? Function()? navigateBack,
+    TResult? Function()? navigateWithdrawal,
+    TResult? Function()? navigateConsigment,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(List<Account> accounts)? started,
     TResult Function()? navigateBack,
+    TResult Function()? navigateWithdrawal,
+    TResult Function()? navigateConsigment,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -39,18 +45,24 @@ mixin _$TransactionEvent {
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
     required TResult Function(_NavigateBack value) navigateBack,
+    required TResult Function(_NavigateWithdrawal value) navigateWithdrawal,
+    required TResult Function(_NavigateConsigment value) navigateConsigment,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
     TResult? Function(_NavigateBack value)? navigateBack,
+    TResult? Function(_NavigateWithdrawal value)? navigateWithdrawal,
+    TResult? Function(_NavigateConsigment value)? navigateConsigment,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
     TResult Function(_NavigateBack value)? navigateBack,
+    TResult Function(_NavigateWithdrawal value)? navigateWithdrawal,
+    TResult Function(_NavigateConsigment value)? navigateConsigment,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -146,6 +158,8 @@ class _$StartedImpl implements _Started {
   TResult when<TResult extends Object?>({
     required TResult Function(List<Account> accounts) started,
     required TResult Function() navigateBack,
+    required TResult Function() navigateWithdrawal,
+    required TResult Function() navigateConsigment,
   }) {
     return started(accounts);
   }
@@ -155,6 +169,8 @@ class _$StartedImpl implements _Started {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(List<Account> accounts)? started,
     TResult? Function()? navigateBack,
+    TResult? Function()? navigateWithdrawal,
+    TResult? Function()? navigateConsigment,
   }) {
     return started?.call(accounts);
   }
@@ -164,6 +180,8 @@ class _$StartedImpl implements _Started {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(List<Account> accounts)? started,
     TResult Function()? navigateBack,
+    TResult Function()? navigateWithdrawal,
+    TResult Function()? navigateConsigment,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -177,6 +195,8 @@ class _$StartedImpl implements _Started {
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
     required TResult Function(_NavigateBack value) navigateBack,
+    required TResult Function(_NavigateWithdrawal value) navigateWithdrawal,
+    required TResult Function(_NavigateConsigment value) navigateConsigment,
   }) {
     return started(this);
   }
@@ -186,6 +206,8 @@ class _$StartedImpl implements _Started {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
     TResult? Function(_NavigateBack value)? navigateBack,
+    TResult? Function(_NavigateWithdrawal value)? navigateWithdrawal,
+    TResult? Function(_NavigateConsigment value)? navigateConsigment,
   }) {
     return started?.call(this);
   }
@@ -195,6 +217,8 @@ class _$StartedImpl implements _Started {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
     TResult Function(_NavigateBack value)? navigateBack,
+    TResult Function(_NavigateWithdrawal value)? navigateWithdrawal,
+    TResult Function(_NavigateConsigment value)? navigateConsigment,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -253,6 +277,8 @@ class _$NavigateBackImpl implements _NavigateBack {
   TResult when<TResult extends Object?>({
     required TResult Function(List<Account> accounts) started,
     required TResult Function() navigateBack,
+    required TResult Function() navigateWithdrawal,
+    required TResult Function() navigateConsigment,
   }) {
     return navigateBack();
   }
@@ -262,6 +288,8 @@ class _$NavigateBackImpl implements _NavigateBack {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(List<Account> accounts)? started,
     TResult? Function()? navigateBack,
+    TResult? Function()? navigateWithdrawal,
+    TResult? Function()? navigateConsigment,
   }) {
     return navigateBack?.call();
   }
@@ -271,6 +299,8 @@ class _$NavigateBackImpl implements _NavigateBack {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(List<Account> accounts)? started,
     TResult Function()? navigateBack,
+    TResult Function()? navigateWithdrawal,
+    TResult Function()? navigateConsigment,
     required TResult orElse(),
   }) {
     if (navigateBack != null) {
@@ -284,6 +314,8 @@ class _$NavigateBackImpl implements _NavigateBack {
   TResult map<TResult extends Object?>({
     required TResult Function(_Started value) started,
     required TResult Function(_NavigateBack value) navigateBack,
+    required TResult Function(_NavigateWithdrawal value) navigateWithdrawal,
+    required TResult Function(_NavigateConsigment value) navigateConsigment,
   }) {
     return navigateBack(this);
   }
@@ -293,6 +325,8 @@ class _$NavigateBackImpl implements _NavigateBack {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Started value)? started,
     TResult? Function(_NavigateBack value)? navigateBack,
+    TResult? Function(_NavigateWithdrawal value)? navigateWithdrawal,
+    TResult? Function(_NavigateConsigment value)? navigateConsigment,
   }) {
     return navigateBack?.call(this);
   }
@@ -302,6 +336,8 @@ class _$NavigateBackImpl implements _NavigateBack {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Started value)? started,
     TResult Function(_NavigateBack value)? navigateBack,
+    TResult Function(_NavigateWithdrawal value)? navigateWithdrawal,
+    TResult Function(_NavigateConsigment value)? navigateConsigment,
     required TResult orElse(),
   }) {
     if (navigateBack != null) {
@@ -316,10 +352,243 @@ abstract class _NavigateBack implements TransactionEvent {
 }
 
 /// @nodoc
+abstract class _$$NavigateWithdrawalImplCopyWith<$Res> {
+  factory _$$NavigateWithdrawalImplCopyWith(_$NavigateWithdrawalImpl value,
+          $Res Function(_$NavigateWithdrawalImpl) then) =
+      __$$NavigateWithdrawalImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$NavigateWithdrawalImplCopyWithImpl<$Res>
+    extends _$TransactionEventCopyWithImpl<$Res, _$NavigateWithdrawalImpl>
+    implements _$$NavigateWithdrawalImplCopyWith<$Res> {
+  __$$NavigateWithdrawalImplCopyWithImpl(_$NavigateWithdrawalImpl _value,
+      $Res Function(_$NavigateWithdrawalImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$NavigateWithdrawalImpl implements _NavigateWithdrawal {
+  const _$NavigateWithdrawalImpl();
+
+  @override
+  String toString() {
+    return 'TransactionEvent.navigateWithdrawal()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$NavigateWithdrawalImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(List<Account> accounts) started,
+    required TResult Function() navigateBack,
+    required TResult Function() navigateWithdrawal,
+    required TResult Function() navigateConsigment,
+  }) {
+    return navigateWithdrawal();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(List<Account> accounts)? started,
+    TResult? Function()? navigateBack,
+    TResult? Function()? navigateWithdrawal,
+    TResult? Function()? navigateConsigment,
+  }) {
+    return navigateWithdrawal?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(List<Account> accounts)? started,
+    TResult Function()? navigateBack,
+    TResult Function()? navigateWithdrawal,
+    TResult Function()? navigateConsigment,
+    required TResult orElse(),
+  }) {
+    if (navigateWithdrawal != null) {
+      return navigateWithdrawal();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_NavigateBack value) navigateBack,
+    required TResult Function(_NavigateWithdrawal value) navigateWithdrawal,
+    required TResult Function(_NavigateConsigment value) navigateConsigment,
+  }) {
+    return navigateWithdrawal(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(_NavigateBack value)? navigateBack,
+    TResult? Function(_NavigateWithdrawal value)? navigateWithdrawal,
+    TResult? Function(_NavigateConsigment value)? navigateConsigment,
+  }) {
+    return navigateWithdrawal?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_NavigateBack value)? navigateBack,
+    TResult Function(_NavigateWithdrawal value)? navigateWithdrawal,
+    TResult Function(_NavigateConsigment value)? navigateConsigment,
+    required TResult orElse(),
+  }) {
+    if (navigateWithdrawal != null) {
+      return navigateWithdrawal(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _NavigateWithdrawal implements TransactionEvent {
+  const factory _NavigateWithdrawal() = _$NavigateWithdrawalImpl;
+}
+
+/// @nodoc
+abstract class _$$NavigateConsigmentImplCopyWith<$Res> {
+  factory _$$NavigateConsigmentImplCopyWith(_$NavigateConsigmentImpl value,
+          $Res Function(_$NavigateConsigmentImpl) then) =
+      __$$NavigateConsigmentImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$NavigateConsigmentImplCopyWithImpl<$Res>
+    extends _$TransactionEventCopyWithImpl<$Res, _$NavigateConsigmentImpl>
+    implements _$$NavigateConsigmentImplCopyWith<$Res> {
+  __$$NavigateConsigmentImplCopyWithImpl(_$NavigateConsigmentImpl _value,
+      $Res Function(_$NavigateConsigmentImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$NavigateConsigmentImpl implements _NavigateConsigment {
+  const _$NavigateConsigmentImpl();
+
+  @override
+  String toString() {
+    return 'TransactionEvent.navigateConsigment()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$NavigateConsigmentImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(List<Account> accounts) started,
+    required TResult Function() navigateBack,
+    required TResult Function() navigateWithdrawal,
+    required TResult Function() navigateConsigment,
+  }) {
+    return navigateConsigment();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(List<Account> accounts)? started,
+    TResult? Function()? navigateBack,
+    TResult? Function()? navigateWithdrawal,
+    TResult? Function()? navigateConsigment,
+  }) {
+    return navigateConsigment?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(List<Account> accounts)? started,
+    TResult Function()? navigateBack,
+    TResult Function()? navigateWithdrawal,
+    TResult Function()? navigateConsigment,
+    required TResult orElse(),
+  }) {
+    if (navigateConsigment != null) {
+      return navigateConsigment();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_NavigateBack value) navigateBack,
+    required TResult Function(_NavigateWithdrawal value) navigateWithdrawal,
+    required TResult Function(_NavigateConsigment value) navigateConsigment,
+  }) {
+    return navigateConsigment(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(_NavigateBack value)? navigateBack,
+    TResult? Function(_NavigateWithdrawal value)? navigateWithdrawal,
+    TResult? Function(_NavigateConsigment value)? navigateConsigment,
+  }) {
+    return navigateConsigment?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_NavigateBack value)? navigateBack,
+    TResult Function(_NavigateWithdrawal value)? navigateWithdrawal,
+    TResult Function(_NavigateConsigment value)? navigateConsigment,
+    required TResult orElse(),
+  }) {
+    if (navigateConsigment != null) {
+      return navigateConsigment(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _NavigateConsigment implements TransactionEvent {
+  const factory _NavigateConsigment() = _$NavigateConsigmentImpl;
+}
+
+/// @nodoc
 mixin _$TransactionState {
   bool get isLoading => throw _privateConstructorUsedError;
   List<Transaction> get transactions => throw _privateConstructorUsedError;
   UiEvent<Nothing>? get navigateBack => throw _privateConstructorUsedError;
+  UiEvent<Nothing>? get navigateWithdrawal =>
+      throw _privateConstructorUsedError;
+  UiEvent<Nothing>? get navigateConsigment =>
+      throw _privateConstructorUsedError;
+  UiEvent<Nothing>? get navigateTransfer => throw _privateConstructorUsedError;
   UiEvent<Nothing>? get error => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -337,6 +606,9 @@ abstract class $TransactionStateCopyWith<$Res> {
       {bool isLoading,
       List<Transaction> transactions,
       UiEvent<Nothing>? navigateBack,
+      UiEvent<Nothing>? navigateWithdrawal,
+      UiEvent<Nothing>? navigateConsigment,
+      UiEvent<Nothing>? navigateTransfer,
       UiEvent<Nothing>? error});
 }
 
@@ -356,6 +628,9 @@ class _$TransactionStateCopyWithImpl<$Res, $Val extends TransactionState>
     Object? isLoading = null,
     Object? transactions = null,
     Object? navigateBack = freezed,
+    Object? navigateWithdrawal = freezed,
+    Object? navigateConsigment = freezed,
+    Object? navigateTransfer = freezed,
     Object? error = freezed,
   }) {
     return _then(_value.copyWith(
@@ -370,6 +645,18 @@ class _$TransactionStateCopyWithImpl<$Res, $Val extends TransactionState>
       navigateBack: freezed == navigateBack
           ? _value.navigateBack
           : navigateBack // ignore: cast_nullable_to_non_nullable
+              as UiEvent<Nothing>?,
+      navigateWithdrawal: freezed == navigateWithdrawal
+          ? _value.navigateWithdrawal
+          : navigateWithdrawal // ignore: cast_nullable_to_non_nullable
+              as UiEvent<Nothing>?,
+      navigateConsigment: freezed == navigateConsigment
+          ? _value.navigateConsigment
+          : navigateConsigment // ignore: cast_nullable_to_non_nullable
+              as UiEvent<Nothing>?,
+      navigateTransfer: freezed == navigateTransfer
+          ? _value.navigateTransfer
+          : navigateTransfer // ignore: cast_nullable_to_non_nullable
               as UiEvent<Nothing>?,
       error: freezed == error
           ? _value.error
@@ -391,6 +678,9 @@ abstract class _$$TransactionStateImplCopyWith<$Res>
       {bool isLoading,
       List<Transaction> transactions,
       UiEvent<Nothing>? navigateBack,
+      UiEvent<Nothing>? navigateWithdrawal,
+      UiEvent<Nothing>? navigateConsigment,
+      UiEvent<Nothing>? navigateTransfer,
       UiEvent<Nothing>? error});
 }
 
@@ -408,6 +698,9 @@ class __$$TransactionStateImplCopyWithImpl<$Res>
     Object? isLoading = null,
     Object? transactions = null,
     Object? navigateBack = freezed,
+    Object? navigateWithdrawal = freezed,
+    Object? navigateConsigment = freezed,
+    Object? navigateTransfer = freezed,
     Object? error = freezed,
   }) {
     return _then(_$TransactionStateImpl(
@@ -422,6 +715,18 @@ class __$$TransactionStateImplCopyWithImpl<$Res>
       navigateBack: freezed == navigateBack
           ? _value.navigateBack
           : navigateBack // ignore: cast_nullable_to_non_nullable
+              as UiEvent<Nothing>?,
+      navigateWithdrawal: freezed == navigateWithdrawal
+          ? _value.navigateWithdrawal
+          : navigateWithdrawal // ignore: cast_nullable_to_non_nullable
+              as UiEvent<Nothing>?,
+      navigateConsigment: freezed == navigateConsigment
+          ? _value.navigateConsigment
+          : navigateConsigment // ignore: cast_nullable_to_non_nullable
+              as UiEvent<Nothing>?,
+      navigateTransfer: freezed == navigateTransfer
+          ? _value.navigateTransfer
+          : navigateTransfer // ignore: cast_nullable_to_non_nullable
               as UiEvent<Nothing>?,
       error: freezed == error
           ? _value.error
@@ -438,6 +743,9 @@ class _$TransactionStateImpl implements _TransactionState {
       {this.isLoading = false,
       final List<Transaction> transactions = const [],
       this.navigateBack,
+      this.navigateWithdrawal,
+      this.navigateConsigment,
+      this.navigateTransfer,
       this.error})
       : _transactions = transactions;
 
@@ -456,11 +764,17 @@ class _$TransactionStateImpl implements _TransactionState {
   @override
   final UiEvent<Nothing>? navigateBack;
   @override
+  final UiEvent<Nothing>? navigateWithdrawal;
+  @override
+  final UiEvent<Nothing>? navigateConsigment;
+  @override
+  final UiEvent<Nothing>? navigateTransfer;
+  @override
   final UiEvent<Nothing>? error;
 
   @override
   String toString() {
-    return 'TransactionState(isLoading: $isLoading, transactions: $transactions, navigateBack: $navigateBack, error: $error)';
+    return 'TransactionState(isLoading: $isLoading, transactions: $transactions, navigateBack: $navigateBack, navigateWithdrawal: $navigateWithdrawal, navigateConsigment: $navigateConsigment, navigateTransfer: $navigateTransfer, error: $error)';
   }
 
   @override
@@ -474,12 +788,25 @@ class _$TransactionStateImpl implements _TransactionState {
                 .equals(other._transactions, _transactions) &&
             (identical(other.navigateBack, navigateBack) ||
                 other.navigateBack == navigateBack) &&
+            (identical(other.navigateWithdrawal, navigateWithdrawal) ||
+                other.navigateWithdrawal == navigateWithdrawal) &&
+            (identical(other.navigateConsigment, navigateConsigment) ||
+                other.navigateConsigment == navigateConsigment) &&
+            (identical(other.navigateTransfer, navigateTransfer) ||
+                other.navigateTransfer == navigateTransfer) &&
             (identical(other.error, error) || other.error == error));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, isLoading,
-      const DeepCollectionEquality().hash(_transactions), navigateBack, error);
+  int get hashCode => Object.hash(
+      runtimeType,
+      isLoading,
+      const DeepCollectionEquality().hash(_transactions),
+      navigateBack,
+      navigateWithdrawal,
+      navigateConsigment,
+      navigateTransfer,
+      error);
 
   @JsonKey(ignore: true)
   @override
@@ -494,6 +821,9 @@ abstract class _TransactionState implements TransactionState {
       {final bool isLoading,
       final List<Transaction> transactions,
       final UiEvent<Nothing>? navigateBack,
+      final UiEvent<Nothing>? navigateWithdrawal,
+      final UiEvent<Nothing>? navigateConsigment,
+      final UiEvent<Nothing>? navigateTransfer,
       final UiEvent<Nothing>? error}) = _$TransactionStateImpl;
 
   @override
@@ -502,6 +832,12 @@ abstract class _TransactionState implements TransactionState {
   List<Transaction> get transactions;
   @override
   UiEvent<Nothing>? get navigateBack;
+  @override
+  UiEvent<Nothing>? get navigateWithdrawal;
+  @override
+  UiEvent<Nothing>? get navigateConsigment;
+  @override
+  UiEvent<Nothing>? get navigateTransfer;
   @override
   UiEvent<Nothing>? get error;
   @override
